@@ -9,8 +9,10 @@ import Albums from '../components/Albums.js';
 import Album from '../components/Album';
 import Sidebar from '../components/Sidebar';
 import Player from '../components/Player';
+import store from '../store';
 
 import { convertAlbum, convertAlbums, convertSong, skip } from '../utils';
+import { startPlaying, stopPlaying, setCurrentSong, setCurrentSongList } from '../reducers/playerReducer';
 
 export default class AppContainer extends Component {
 
@@ -57,21 +59,23 @@ export default class AppContainer extends Component {
 
   play () {
     AUDIO.play();
-    this.setState({ isPlaying: true });
+    store.dispatch(startPlaying());
   }
 
   pause () {
     AUDIO.pause();
-    this.setState({ isPlaying: false });
+    store.dispatch(stopPlaying());
   }
 
   load (currentSong, currentSongList) {
     AUDIO.src = currentSong.audioUrl;
     AUDIO.load();
-    this.setState({
-      currentSong: currentSong,
-      currentSongList: currentSongList
-    });
+    // this.setState({
+    //   currentSong: currentSong,
+    //   currentSongList: currentSongList
+    // });
+    store.dispatch(setCurrentSong(currentSong));
+    store.dispatch(setCurrentSongList(currentSongList));
   }
 
   startSong (song, list) {
