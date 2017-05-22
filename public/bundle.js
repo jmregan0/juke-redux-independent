@@ -9337,7 +9337,30 @@ module.exports = function bind(fn, thisArg) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+// ******Lyrics******
 var SET_LYRICS = exports.SET_LYRICS = 'SET_LYRICS';
+
+// Albums
+var RECEIVE_ALBUMS = exports.RECEIVE_ALBUMS = 'RECEIVE_ALBUMS';
+var RECEIVE_ALBUM = exports.RECEIVE_ALBUM = 'RECEIVE_ALBUM';
+
+// Artists
+var RECEIVE_ARTISTS = exports.RECEIVE_ARTISTS = 'RECEIVE_ARTISTS';
+var RECEIVE_ARTIST = exports.RECEIVE_ARTIST = 'RECEIVE_ARTIST';
+
+// Playlists
+var RECEIVE_PLAYLISTS = exports.RECEIVE_PLAYLISTS = 'RECEIVE_PLAYLISTS';
+var RECEIVE_PLAYLIST = exports.RECEIVE_PLAYLIST = 'RECEIVE_PLAYLIST';
+
+// Songs
+var RECEIVE_SONGS = exports.RECEIVE_SONGS = 'RECEIVE_SONGS';
+
+// Player
+var START_PLAYING = exports.START_PLAYING = 'START_PLAYING';
+var STOP_PLAYING = exports.STOP_PLAYING = 'STOP_PLAYING';
+var SET_CURRENT_SONG = exports.SET_CURRENT_SONG = 'SET_CURRENT_SONG';
+var SET_LIST = exports.SET_LIST = 'SET_LIST';
+var SET_PROGRESS = exports.SET_PROGRESS = 'SET_PROGRESS';
 
 /***/ }),
 /* 86 */
