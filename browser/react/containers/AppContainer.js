@@ -206,7 +206,7 @@ export default class AppContainer extends Component {
         }
         </div>
         <Player
-          currentSong={this.state.currentSong}
+          currentSong={this.state.player.currentSong}
           currentSongList={this.state.currentSongList}
           isPlaying={this.state.isPlaying}
           progress={this.state.progress}
